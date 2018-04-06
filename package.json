@@ -1,0 +1,32 @@
+{
+  "name": "lemoncode-cli",
+  "version": "0.0.1",
+  "description": "Lemoncode CLI for create seed projects with webpack.",
+  "main": "./src/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "lemoncode-cli": "./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemoncode/lemoncode-cli.git"
+  },
+  "keywords": [
+    "lemoncode-cli",
+    "scaffolding",
+    "config",
+    "webpack 3",
+    "webpack 4"
+  ],
+  "author": "Lemoncode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lemoncode/lemoncode-cli/issues"
+  },
+  "homepage": "https://github.com/Lemoncode/lemoncode-cli#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "inquirer": "^5.2.0",
+    "ncp": "^2.0.0"
+  }
+}
