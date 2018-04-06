@@ -7,6 +7,9 @@
   "bin": {
     "lemoncode-cli": "./src/index.js"
   },
+  "scripts": {
+    "start": "node src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lemoncode/lemoncode-cli.git"
