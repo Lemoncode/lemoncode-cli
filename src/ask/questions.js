@@ -15,7 +15,7 @@ module.exports = {
     {
       name: 'webpackVersion',
       type: 'list',
-      message: 'Which wepback version?',
+      message: 'Which webpack version?',
       choices: [
         '3',
       ],
