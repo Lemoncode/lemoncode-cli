@@ -22,11 +22,13 @@ Lemoncode CLI for create seed projects with webpack.
 ## Dependencies
 
 - `babel-polyfill@6`
+- `whatwg-fetch@2`
 
 - If react
   - `react@16`
   - `react-dom@16`
   - `react-hot-loader@3`
+  - `react-router@3`
 
 ## Dev dependencies
 
@@ -50,6 +52,7 @@ Lemoncode CLI for create seed projects with webpack.
   - `@types/react@16`
   - `@types/react-dom@16`
   - `@types/react-hot-loader@3`
+  - `@types/react-router@3`
 
 ### Using in package.json
 - `env-cmd@7`

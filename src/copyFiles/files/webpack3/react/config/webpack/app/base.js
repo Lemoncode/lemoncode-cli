@@ -16,6 +16,8 @@ module.exports = merge(common, {
       'react',
       'react-dom',
       'react-hot-loader',
+      'react-router',
+      'whatwg-fetch',
     ],
     appStyles: [
     ],

@@ -13,6 +13,7 @@ module.exports = merge(common, {
     ],
     vendor: [
       'babel-polyfill',
+      'whatwg-fetch',
     ],
     appStyles: [
     ],
