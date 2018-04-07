@@ -54,6 +54,7 @@ Lemoncode CLI for create seed projects with webpack.
 ### Using in package.json
 - `env-cmd@7`
 - `if-env@1`
+- `cross-env@5`
 - `rimraf@2`
 
 ### Webpack common dependencies

@@ -2,13 +2,21 @@
 
 const chalk = require('chalk').default;
 const { ask } = require('./ask');
+const { copyFiles } = require('./copyFiles');
 
 console.log(
-  chalk.bgBlue('   Lemoncode CLI   ')
+  chalk.greenBright('   Lemoncode CLI   ')
 );
 
 const run = async () => {
-  await ask();
+  const config = await ask();
+  try {
+    copyFiles(config);
+  } catch (error) {
+    console.log(
+      chalk.red(error)
+    );
+  }
 }
 
 run();
