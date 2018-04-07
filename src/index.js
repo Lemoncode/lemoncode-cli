@@ -5,7 +5,7 @@ const { ask } = require('./ask');
 const { copyFiles } = require('./copyFiles');
 
 console.log(
-  chalk.greenBright('   Lemoncode CLI   ')
+  chalk.greenBright('Lemoncode CLI')
 );
 
 const run = async () => {
