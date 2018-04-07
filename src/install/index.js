@@ -1,4 +1,4 @@
-const install = require('./install');
+const { install } = require('./install');
 
 module.exports = {
   install,

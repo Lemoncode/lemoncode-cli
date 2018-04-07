@@ -58,7 +58,7 @@ module.exports = {
       'webpack-dev-server@2',
     ],
     webpack4: [
-      'mini-css-extract-plugin@3',
+      'mini-css-extract-plugin',
       'webpack@4',
       'webpack-dev-server@3',
     ],
