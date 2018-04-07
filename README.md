@@ -89,7 +89,7 @@ Lemoncode CLI for create seed projects with webpack.
 
 - Download repository:
 
-- Cd on folder
+- `cd` on folder
 
 ```bash
 cd lemoncode-cli
@@ -102,7 +102,11 @@ cd lemoncode-cli
 npm link
 ```
 
-- Now we could run:
+- Now we could `cd` on our project path and run:
+
+```bash
+cd my-project
+```
 
 ```bash
 lemoncode-cli
