@@ -80,7 +80,7 @@ Lemoncode CLI for create seed projects with webpack.
 - `webpack-dev-server@2`
 
 ### Webpack 4.x
-- `mini-css-extract-plugin@3`
+- `mini-css-extract-plugin`
 - `webpack@4`
 - `webpack-dev-server@3`
 
