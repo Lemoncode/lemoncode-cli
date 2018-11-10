@@ -1,35 +1,37 @@
 const { dependencies, devDependencies } = require('./constants');
 
 module.exports = {
-  getDependencies: (config) => {
-    let libs = dependencies.base;
+  getDependencies: config => {
+    let libs = dependencies.common;
+
     if (config.useReact) {
-      libs = [
-        ...libs,
-        ...dependencies.react
-      ];
+      libs = [...libs, ...dependencies.react];
     }
 
     return libs;
   },
 
-  getDevDependencies: (config) => {
+  getDevDependencies: config => {
     let libs = [
-      ...devDependencies.base,
+      ...devDependencies.common,
+      ...devDependencies.typescript.common,
       ...devDependencies[`webpack${config.webpackVersion}`],
+      ...devDependencies.typescript.webpack,
     ];
 
     if (config.useReact) {
       libs = [
         ...libs,
-        ...devDependencies.react
+        ...devDependencies.react,
+        ...devDependencies.typescript.react,
       ];
     }
 
     if (config.useJest) {
       libs = [
         ...libs,
-        ...devDependencies.jest
+        ...devDependencies.jest,
+        ...devDependencies.typescript.jest,
       ];
     }
 

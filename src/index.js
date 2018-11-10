@@ -6,9 +6,7 @@ const { copyFiles } = require('./copyFiles');
 const { install } = require('./install');
 const { updatePackageJson } = require('./updatePackageJson');
 
-console.log(
-  chalk.greenBright('Lemoncode CLI')
-);
+console.log(chalk.greenBright('Lemoncode CLI'));
 
 const run = async () => {
   const config = await ask();
@@ -17,10 +15,8 @@ const run = async () => {
     await install(config);
     await updatePackageJson(config);
   } catch (error) {
-    console.log(
-      chalk.red(error)
-    );
+    console.log(chalk.red(error));
   }
-}
+};
 
 run();

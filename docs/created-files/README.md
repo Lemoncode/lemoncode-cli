@@ -2,19 +2,23 @@
 
 - ./config:
 
-  - /helpers.js
+  ### Common
+
+  - ./helpers.js
 
   ### Test
 
-  - /test/polyfills.js
-  - /test/setupTest.js
+  - ./test/polyfills.js
+  - ./test/setupTest.js
 
-  ###  Webpack
+  ### Webpack
 
-  - /webpack/common.js
-  - /webpack/app/base.js
-  - /webpack/app/dev.js
-  - /webpack/app/prod.js
+  - ./webpack/common.js
+  - ./webpack/app/base.js
+  - ./webpack/app/dev.js
+  - ./webpack/app/prod.js
+
+## Common
 
 - .babelrc
 - .editorconfig
@@ -22,10 +26,11 @@
 - package.json: Update scripts commands, jest config (and install libs)
 
 ## Typescript
+
 - tsconfig.json
 - tslint.json
 
-
 // TODO:
+
 - Prettier
 - Bundle analyzer

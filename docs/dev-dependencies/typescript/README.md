@@ -1,13 +1,12 @@
 # Typescript dependencies
 
-## App
+## Common
 
 - @types/node@8
 - tslint@5
-- tslint-react@3
-- typescript@2
+- typescript@3
 
-## Testing
+## Jest
 
 - @types/enzyme@3
 - @types/jest@22
@@ -23,5 +22,6 @@
 - @types/react-dom@16
 - @types/react-hot-loader@3
 - @types/react-router@3
+- tslint-react@3
 
 > TODO: Replace enzyme by [react-testing-library](https://github.com/kentcdodds/react-testing-library)

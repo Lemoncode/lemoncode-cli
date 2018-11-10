@@ -8,17 +8,10 @@ const helpers = require('../../helpers');
 module.exports = merge(common, {
   context: helpers.resolveFromRootPath('src'),
   entry: {
-    app: [
-      './index.ts',
-    ],
-    vendor: [
-      'babel-polyfill',
-      'whatwg-fetch',
-    ],
-    appStyles: [
-    ],
-    vendorStyles: [
-    ],
+    app: ['./index.ts'],
+    vendor: ['@babel/polyfill', 'whatwg-fetch'],
+    appStyles: [],
+    vendorStyles: [],
   },
 
   module: {
@@ -30,6 +23,7 @@ module.exports = merge(common, {
         options: {
           useBabel: true,
           useCache: true,
+          babelCore: '@babel/core',
         },
       },
       {
@@ -65,7 +59,7 @@ module.exports = merge(common, {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['vendor', 'manifest'],
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -76,7 +70,7 @@ module.exports = merge(common, {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
   ],

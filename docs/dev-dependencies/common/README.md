@@ -3,7 +3,10 @@
 - @babel/cli
 - @babel/core
 - @babel/preset-env
+
+## Webpack
 - css-loader
+- clean-webpack-plugin
 - html-webpack-plugin
 - file-loader
 - node-sass

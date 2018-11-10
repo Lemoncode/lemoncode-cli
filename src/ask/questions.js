@@ -18,6 +18,7 @@ module.exports = {
       message: 'Which webpack version?',
       choices: [
         '3',
+        '4',
       ],
       filter: (value) => Number(value),
     },

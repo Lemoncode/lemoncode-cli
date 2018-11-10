@@ -1,9 +1,9 @@
 const fs = require('fs');
 const { getProcessBasePath } = require('../helpers');
-const { scripts, jest } = require('./constants');
+const { scripts } = require('./constants');
 
 module.exports = {
-  updatePackageJson: async (config) => {
+  updatePackageJson: async config => {
     const basePath = getProcessBasePath();
     const path = `${basePath}/package.json`;
     const file = require(path);
@@ -12,20 +12,13 @@ module.exports = {
       ...file.scripts,
       ...scripts,
     };
-
-    if (config.useJest) {
-      file.jest = {
-        ...jest,
-      };
-    }
     return await updatePackageJsonFile(file, path);
-  }
-}
+  },
+};
 
-const updatePackageJsonFile = (file, path) => new Promise((resolve, reject) => {
-  fs.writeFile(path, JSON.stringify(file), (error) => (
-    Boolean(error) ?
-      reject(error) :
-      resolve()
-  ));
-});
+const updatePackageJsonFile = (file, path) =>
+  new Promise((resolve, reject) => {
+    fs.writeFile(path, JSON.stringify(file), error =>
+      Boolean(error) ? reject(error) : resolve()
+    );
+  });

@@ -2,11 +2,11 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const base = require('./base');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const helpers = require('../../helpers');
 
-const hotReloadingEntries = [
-  'react-hot-loader/patch',
-];
+const outputPath = helpers.resolveFromRootPath('dist');
+const hotReloadingEntries = ['react-hot-loader/patch'];
 
 module.exports = merge.strategy({
   entry: 'prepend',
@@ -17,11 +17,11 @@ module.exports = merge.strategy({
     appStyles: hotReloadingEntries,
   },
   output: {
-    path: helpers.resolveFromRootPath('dist'),
-    filename: '[name].js',
+    path: outputPath,
+    filename: 'js/[name].js',
   },
   devServer: {
-    contentBase: helpers.resolveFromRootPath('dist'),
+    contentBase: outputPath,
     inline: true,
     host: 'localhost',
     port: 8080,
@@ -34,5 +34,6 @@ module.exports = merge.strategy({
     new ExtractTextPlugin({
       disable: true,
     }),
+    new CleanWebpackPlugin(outputPath),
   ],
 });

@@ -1,10 +1,8 @@
-const webpack = require('webpack');
 const { CheckerPlugin } = require('awesome-typescript-loader');
-const helpers = require('../helpers');
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.tsx'],
   },
   module: {
     rules: [
@@ -15,28 +13,59 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'application/font-woff',
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/octet-stream',
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'application/octet-stream',
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml',
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'image/svg+xml',
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
       {
-        test: /\.(png|jpg|ico|gif)?$/,
-        loader: 'url-loader?limit=10000',
+        test: /\.(png|jpg|ico)?$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+            mimetype: 'image/png',
+            name: './img/[hash].[name].[ext]',
+          },
+        },
       },
-    ]
+    ],
   },
 
-  plugins: [
-    new CheckerPlugin(),
-  ],
-}
+  plugins: [new CheckerPlugin()],
+};
