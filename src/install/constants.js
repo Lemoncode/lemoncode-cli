@@ -31,7 +31,7 @@ module.exports = {
     typescript: {
       common: ['@types/node@8', 'tslint@5', 'typescript@3'],
       jest: ['@types/enzyme@3', '@types/jest', 'ts-jest'],
-      webpack: ['awesome-typescript-loader', 'tslint-loader'],
+      webpack: ['tslint-loader'],
       react: [
         '@types/react@16',
         '@types/react-dom@16',
@@ -47,11 +47,13 @@ module.exports = {
       '@types/react-router@3',
     ],
     webpack3: [
+      'awesome-typescript-loader@4',
       'extract-text-webpack-plugin@3',
       'webpack@3',
       'webpack-dev-server@2',
     ],
     webpack4: [
+      'awesome-typescript-loader',
       'mini-css-extract-plugin',
       'webpack-cli',
       'webpack@4',
