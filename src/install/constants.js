@@ -29,7 +29,7 @@ module.exports = {
       'raf',
     ],
     typescript: {
-      common: ['@types/node@8', 'tslint@5', 'typescript@3'],
+      common: ['@types/node@8', '@types/webpack-env@1', 'tslint@5', 'typescript@3'],
       jest: ['@types/enzyme@3', '@types/jest', 'ts-jest'],
       webpack: ['tslint-loader'],
       react: [

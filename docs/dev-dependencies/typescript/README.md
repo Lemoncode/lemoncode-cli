@@ -3,6 +3,7 @@
 ## Common
 
 - @types/node@8
+- @types/webpack-env@1
 - tslint@5
 - typescript@3
 
@@ -13,7 +14,6 @@
 - ts-jest@22
 
 ## Webpack
-- awesome-typescript-loader
 - tslint-loader
 
 ## React
