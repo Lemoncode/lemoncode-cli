@@ -1,11 +1,10 @@
 const fs = require('fs');
-const { getProcessBasePath } = require('../helpers');
+const { getPackageJsonPath } = require('../helpers');
 const { scripts } = require('./constants');
 
 module.exports = {
-  updatePackageJson: async config => {
-    const basePath = getProcessBasePath();
-    const path = `${basePath}/package.json`;
+  updatePackageJson: async () => {
+    const path = getPackageJsonPath();
     const file = require(path);
 
     file.scripts = {

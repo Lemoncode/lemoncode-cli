@@ -1,12 +1,21 @@
 const { copySync } = require('fs-extra');
 
-module.exports = {
-  getProcessBasePath: () => process.cwd(),
+const getProcessBasePath = () => process.cwd();
 
-  overwritingCopy: (srcPath, outputPath) => {
-    copySync(srcPath, outputPath, {
-      overwrite: true,
-      recursive: true,
-    });
-  },
+const overwritingCopy = (srcPath, outputPath) => {
+  copySync(srcPath, outputPath, {
+    overwrite: true,
+    recursive: true,
+  });
+};
+
+const getPackageJsonPath = () => {
+  const basePath = getProcessBasePath();
+  return `${basePath}/package.json`;
+};
+
+module.exports = {
+  getProcessBasePath,
+  overwritingCopy,
+  getPackageJsonPath,
 };
